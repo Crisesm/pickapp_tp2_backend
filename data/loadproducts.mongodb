@@ -1,0 +1,15 @@
+use('test');
+
+db.products.drop();
+
+db.products.insertMany([
+  {
+  "categoria": "Bebida",
+  "titulo": "Bebida Cola",
+  "imagen": "",
+  "descripcion": "Bebida gasificada sabor Cola",
+  "importe": 100,
+  "stock": 10
+ }
+]);
+
