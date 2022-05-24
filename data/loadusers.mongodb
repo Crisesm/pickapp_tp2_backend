@@ -1,0 +1,14 @@
+use('test');
+
+db.users.drop();
+
+db.users.insertMany([
+ {
+  "email": "diego@diego.com",
+  "password": "12345678"
+ },
+ {
+  "email": "martin@martin.com",
+  "password": "12345678"
+ }
+]);

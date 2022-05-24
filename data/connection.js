@@ -1,13 +1,23 @@
+require('dotenv').config();
+
 const mongoclient = require('mongodb').MongoClient;
 
-const uri = "mongodb+srv://user_tp2:tp123456@cluster0.iqa99.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGO_DB;
 
 const client = new mongoclient(uri);
 
 let instance = null;
 
+// Devuelve una conexion nueva para vez que se llama (reemplazarlo)
 async function getConnection(){
-    let instance = await client.connect();
+    if(instance == null){
+        try{
+            instance = await client.connect();
+        } catch (error){
+            console.log(error.message);
+            throw new Error('Error en la conexion con MongoDB');
+        }
+    }
     return instance;
 }
 
