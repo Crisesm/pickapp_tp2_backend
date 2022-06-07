@@ -8,8 +8,9 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-
 var app = express();
+const cors = require("cors"); 
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
