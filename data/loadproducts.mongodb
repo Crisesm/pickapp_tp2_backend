@@ -1,0 +1,134 @@
+use('proyecto_uno');
+
+db.products.insertMany([
+
+{
+    "categoria": "comida",
+    "nombre": "Pasta",
+    "imagen": 'https://picsum.photos/id/293/800',
+    "precio": 250, 
+    "descripcion": "Pasta con fileto",
+    "stock": 10
+},
+{
+    "categoria": "comida",
+    "nombre": "Pizza",
+    "imagen": 'https://picsum.photos/id/226/800',
+    "precio": 800, 
+    "descripcion": "Pizza de muzzarella",
+    "stock": 10
+},
+{
+    "categoria": "comida",
+    "nombre": "Hamburguesa",
+    "imagen": 'https://picsum.photos/id/327/800',
+    "precio": 500, 
+    "descripcion": "Cheese Burger",
+    "stock": 10
+},
+{
+    "categoria": "comida",
+    "nombre": "Lomo",
+    "imagen": 'https://picsum.photos/id/1081/800',
+    "precio": 800, 
+    "descripcion": "Lomo con papas",
+    "stock": 10
+},
+{
+    "categoria": "bebida",
+    "nombre": "Agua",
+    "imagen": 'https://picsum.photos/id/294/800',
+    "precio": 250, 
+    "descripcion": "Agua sin gas",
+    "stock": 10
+},
+{
+    "categoria": "bebida",
+    "nombre": "Gaseosa",
+    "imagen": 'https://picsum.photos/id/227/800',
+    "precio": 250, 
+    "descripcion": "Gaseosa sabor cola",
+    "stock": 10
+},
+{
+    "categoria": "bebida",
+    "nombre": "Cerveza",
+    "imagen": 'https://picsum.photos/id/328/800',
+    "precio": 400, 
+    "descripcion": "Cerveza artesanal",
+    "stock": 10
+},
+{
+    "categoria": "bebida",
+    "nombre": "Vino",
+    "imagen": 'https://picsum.photos/id/1082/800',
+    "precio": 900, 
+    "descripcion": "Vino tinto Malbec",
+    "stock": 10
+},
+{
+    "categoria": "postre",
+    "nombre": "Flan",
+    "imagen": 'https://picsum.photos/id/292/800',
+    "precio": 100, 
+    "descripcion": "Flan con dulce de leche",
+    "stock": 10
+},
+{
+    "categoria": "postre",
+    "nombre": "Helado",
+    "imagen": 'https://picsum.photos/id/225/800',
+    "precio": 200, 
+    "descripcion": "Helado de chocolate",
+    "stock": 10
+},
+{
+    "categoria": "postre",
+    "nombre": "Torta",
+    "imagen": 'https://picsum.photos/id/326/800',
+    "precio": 500, 
+    "descripcion": "Torta de frutilla",
+    "stock": 10
+},
+{
+    "categoria": "postre",
+    "nombre": "Mousse",
+    "imagen": 'https://picsum.photos/id/1080/800',
+    "precio": 400, 
+    "descripcion": "Mousse de chocolate",
+    "stock": 10
+},
+{
+    "categoria": "snack",
+    "nombre": "Papas Fritas",
+    "imagen": 'https://picsum.photos/id/295/800',
+    "precio": 300, 
+    "descripcion": "Porcion de papas fritas",
+    "stock": 10
+},
+{
+    "categoria": "snack",
+    "nombre": "Papas Bravas",
+    "imagen": 'https://picsum.photos/id/228/800',
+    "precio": 300, 
+    "descripcion": "Porcion de papas bravas",
+    "stock": 10
+},
+{
+    "categoria": "snack",
+    "nombre": "Picada",
+    "imagen": 'https://picsum.photos/id/329/800',
+    "precio": 1500, 
+    "descripcion": "Picada completa para 3 personas",
+    "stock": 10
+},
+{
+    "categoria": "snack",
+    "nombre": "Nachos",
+    "imagen": 'https://picsum.photos/id/1083/800',
+    "precio": 600, 
+    "descripcion": "Nachos con guacamole",
+    "stock": 10
+}
+]);
+

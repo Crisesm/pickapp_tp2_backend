@@ -1,0 +1,2 @@
+use('proyecto_uno');
+db.products.find();
