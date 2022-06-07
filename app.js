@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
+const jwtConfig = require('./jwtConfig');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -24,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/products', productsRouter);
+app.use('/api/products', jwtConfig.verifyToken, productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
