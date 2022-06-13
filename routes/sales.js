@@ -18,7 +18,8 @@ router.get('/:id', async (req, res) => {
 })
 
 //GET: /api/sales/user/:id
-router.get('/user/:id', jwtConfig.verifyToken(), async (req, res) => {
+//router.get('/user/:id', jwtConfig.verifyToken, async (req, res) => {
+router.get('/user/:id', async (req, res) => {
     const sale = await data.getSaleByIdUser(req.params.id);
     res.json(sale);
 })
