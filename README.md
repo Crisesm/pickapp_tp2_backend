@@ -62,12 +62,14 @@ Ventas:
     -Lista de una venta por Id
     //GET /api/sales/:id
 
-    -Lsita de uan venta por Id de Usuario
+    -Lista de una venta por Id de Usuario
     //GET /api/sales/user/:id
 
     -Agregar una venta
     //POST /api/sales
 
+EndPoints de Mantenimiento:
+    
 
 Descripción de funcionalidades:
 

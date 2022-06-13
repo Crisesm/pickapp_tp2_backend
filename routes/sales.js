@@ -2,7 +2,8 @@ const { json } = require('express');
 const express = require('express');
 const { ObjectId } = require('mongodb');
 const router = express.Router();
-const data = require('../data/sales')
+const data = require('../data/sales');
+const jwtConfig = require('../jwtConfig');
 
 //GET: /api/sales/
 router.get('/', async function(req, res, next) {
@@ -17,7 +18,7 @@ router.get('/:id', async (req, res) => {
 })
 
 //GET: /api/sales/user/:id
-router.get('/user/:id', async (req, res) => {
+router.get('/user/:id', jwtConfig.verifyToken(), async (req, res) => {
     const sale = await data.getSaleByIdUser(req.params.id);
     res.json(sale);
 })
