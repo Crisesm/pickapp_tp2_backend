@@ -55,8 +55,18 @@ Usuarios:
     //POST /api/users/login
 
 
-
 Ventas:
+    -Listado de ventas
+    //GET /api/sales/
+
+    -Lista de una venta por Id
+    //GET /api/sales/:id
+
+    -Lsita de uan venta por Id de Usuario
+    //GET /api/sales/user/:id
+
+    -Agregar una venta
+    //POST /api/sales
 
 
 Descripción de funcionalidades:
@@ -105,7 +115,7 @@ Estructura de productos en Mongodb
   "descripcion": "descripcion de los ingrediente",
   "stock": <cantidad>
  }
- ]
+]
 
 
 Estructura de usuarios en Mongodb
@@ -114,17 +124,19 @@ Estructura de usuarios en Mongodb
   "_id": ObjectId(id),
   "email": "email del usuario",
   "password": "password encriptada",
-}
- ]
+ }
+]
 
 Estructura de ventas en Mongodb
 [
  {
   "_id": ObjectId(id),
-  "id del usuario": user._id,
-  "items": Array
-	"producto": <nombre del producto>,
-  "fecha": "fecha de la venta",
-}
- ]
-
+  "idUser": user._id,
+  "productos": ["<nombre del producto>", "<nombre del producto>"],
+	"medioDePago": "efectivo", "tarjeta",
+  "numeroTarjeta": "13214654878"
+  "fechaVto": "21/12",
+  "pin": "1234"
+  "montoTotal": 
+ }
+]

@@ -1,6 +1,6 @@
 use('proyecto_uno');
 
-db.products.insertMany([
+db.sales.insertMany([
 
 {
     "categoria": "comida",

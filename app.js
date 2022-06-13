@@ -9,6 +9,7 @@ const jwtConfig = require('./jwtConfig');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+var salesRouter = require('./routes/sales');
 var app = express();
 const cors = require("cors"); 
 app.use(cors());
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/products', /* jwtConfig.verifyToken, */ productsRouter);
+app.use('/api/sales', /* jwtConfig.verifyToken, */ salesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

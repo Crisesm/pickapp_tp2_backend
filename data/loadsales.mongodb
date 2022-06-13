@@ -1,0 +1,23 @@
+use('proyecto_uno');
+
+db.sales.insertMany([
+
+{
+    "idUser": "1",
+    "productos": "Pasta",
+    "medioDePago": "Efectivo",
+    "numeroTarjeta": "",
+    "fechaVto": "",
+    "pin": "",
+    "montoTotal": 1350
+},
+{
+    "idUser": ObjectId("629d6c3e043dc732dc52832d"),
+    "productos": "Papas Bravas",
+    "medioDePago": "Tarjeta",
+    "numeroTarjeta": "1234 5678 9012 3456", 
+    "fechaVto": 16-06-2022,
+    "pin": 777,
+    "montoTotal": 1200
+}
+]);
