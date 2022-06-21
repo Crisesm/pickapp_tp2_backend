@@ -49,7 +49,7 @@ Usuarios:
     //GET /api/users/
 
     -Registracion de usuario
-    //POST /api/users/
+    //POST /api/users/register
 
     -Login de usuario
     //POST /api/users/login

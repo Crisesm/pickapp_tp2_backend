@@ -20,8 +20,7 @@ async function getUser(id){
     const user = await connectdb
                         .db(process.env.DATABASE)
                         .collection(process.env.TABLE_USERS)
-                        .find({_id: new objectId(id)})
-                        .toArray();
+                        .findOne({_id: new objectId(id)});
     return user;
 }
 
@@ -64,4 +63,14 @@ async function generateToken(user){
     return token;
 }
 
-module.exports = {addUser, getAllUsers, findByCredentials, generateToken, getUser}
+async function findByEmail(email){
+    const connectdb = await connection.getConnection();
+
+    const user = await connectdb
+                            .db(process.env.DATABASE)
+                            .collection(process.env.TABLE_USERS)
+                            .findOne({email: email});
+    return user;
+}
+
+module.exports = {addUser, getAllUsers, findByCredentials, generateToken, getUser, findByEmail}

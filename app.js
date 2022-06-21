@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
-const jwtConfig = require('./jwtConfig');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -27,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/products', productsRouter);
+//Tenemos creada la logica de autenticacion, pero no la estamos usando en el front "sin logueo"
 app.use('/api/sales', /* auth, */ salesRouter);
 
 // catch 404 and forward to error handler
