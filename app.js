@@ -26,8 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/products', /* jwtConfig.verifyToken, */ productsRouter);
-app.use('/api/sales', /* jwtConfig.verifyToken, */ salesRouter);
+app.use('/api/products', productsRouter);
+app.use('/api/sales', /* auth, */ salesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

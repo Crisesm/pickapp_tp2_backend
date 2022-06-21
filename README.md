@@ -2,8 +2,8 @@
 
 Proyecto Backend de la materia Taller de Programación II
 
-Equipo: 2   |   Curso: Belgrano C   |   Profesor: Pablo Fernandez Hinojosa
-Alumnos: Cristian Esem - Victor Lacco - Diego Ponzo - Julian Perini - Martin Chab
+Grupo 1   |   Curso: Belgrano C   |   Profesor: Pablo Fernandez Hinojosa
+Integrantes: Cristian Esem - Victor Lacco - Diego Ponzo - Julian Perini - Martin Chab
 
 Nombre de la Aplicación: pick-app
 
@@ -69,7 +69,7 @@ Ventas:
     //POST /api/sales
 
 EndPoints de Mantenimiento:
-    
+
 
 Descripción de funcionalidades:
 

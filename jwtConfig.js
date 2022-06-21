@@ -1,4 +1,5 @@
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 let jwtConfig = {
     // middleware to validate token (rutas protegidas)
@@ -8,7 +9,7 @@ let jwtConfig = {
         try {
             const verified = jwt.verify(token, process.env.KEY_SECRET)
             req.tokenRecibido = verified
-            next() // continuamos
+            next()
         } catch (error) {
             res.status(400).json({ error: 'token no es válido' })
         }
@@ -16,5 +17,5 @@ let jwtConfig = {
 
  
 }
-module.exports = jwtConfig;
+module.exports = {jwtConfig};
 
