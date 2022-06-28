@@ -13,6 +13,10 @@ Dicha aplicacion es parte del proyecto de la materia Programación de Nuevas Tec
 
 En la base de datos MongoDB, se encuentran almacenados los productos, los usuarios registrados y las compras realizadas por los usuarios.
 
+Instalacion:
+    - npm install
+    - npm run start-dev
+
 Los endpoints disponibles para el frontend son:
 
 Productos:
@@ -46,27 +50,27 @@ Productos:
 
 Usuarios:
     -Listado de usuarios
-    //GET /api/users/
+    GET /api/users/
 
     -Registracion de usuario
-    //POST /api/users/register
+    POST /api/users/register
 
     -Login de usuario
-    //POST /api/users/login
+    POST /api/users/login
 
 
 Ventas:
     -Listado de ventas
-    //GET /api/sales/
+    GET /api/sales/
 
     -Lista de una venta por Id
-    //GET /api/sales/:id
+    GET /api/sales/:id
 
     -Lista de una venta por Id de Usuario
-    //GET /api/sales/user/:id
+    GET /api/sales/user/:id
 
     -Agregar una venta
-    //POST /api/sales
+    POST /api/sales
 
 EndPoints de Mantenimiento:
 
@@ -103,6 +107,8 @@ Pantallas:
     .Registracion
     .Login
     .Carrito(checkout)
+    .Verificacion de Compra
+    .Pago
 
 //////////
 
